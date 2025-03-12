@@ -1,0 +1,54 @@
+I ran
+"const DocumentName docname = "primes_small";
+const int iterations = 1000;
+const Word nonexistent_word = "bbbbbbbbbbbbrrrrrrrrrrrriannn";"
+with the -O0 -fno-inline compile flag:
+use_vector had 36.71%, use_map had 36.17%, and use_list had 25.51%
+
+Now with the -O2 compile flag:
+use_vector:
+2.50% as shown here: 
+1,489,000 ( 2.50%)  /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/stl_tree.h:use_vector(Document const&)
+AND 35.35% as shown here:
+21,085,913 (35.35%)  compare_main.cpp:use_vector(Document const&) [/home/brianwong1/asgn08-doclookup-brian-hw8/compare_main]
+
+use_map:
+4.83% as shown here:
+2,881,180 ( 4.83%)  /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/stl_tree.h:use_map(Document const&)
+AND 
+35.54% as shown here:
+21,197,694 (35.54%)  compare_main.cpp:use_map(Document const&) [/home/brianwong1/asgn08-doclookup-brian-hw8/compare_main]
+
+use_list:
+4.36% as shown here:
+2,598,000 ( 4.36%)  /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/stl_list.h:use_list(Document const&)
+AND 
+23.39% as shown here:
+13,952,887 (23.39%)  compare_main.cpp:use_list(Document const&) [/home/brianwong1/asgn08-doclookup-brian-hw8/compare_main]
+
+
+I ran
+"const DocumentName docname = "primes_large";
+const int iterations = 1;
+const Word nonexistent_word = "bbbbbbbbbbbbrrrrrrrrrrrriannn";"
+with the -O0 -fno-inline compile flag:
+use_vector had 46.75%, use_map had 4.89%, and use_list had 46.12%.
+
+Now with the -O2 compile flag:
+use_vector had 41.06%, use_map had 1.20% + 8.17%, and use_list had 40.29%
+3,502,922 ( 8.17%)  compare_main.cpp:use_map(Document const&) [/home/brianwong1/asgn08-doclookup-brian-hw8/compare_main]
+514,764 ( 1.20%)  /opt/rh/gcc-toolset-12/root/usr/include/c++/12/bits/stl_tree.h:use_map(Document const&)
+
+
+Short summary: When running on a small document such as primes_small with a lot of iterations,
+use_vector and use_map have about the same amount of percentage at 36% but are both around 10% more than 
+use_list when ran with the -O0 compile flag. However, when ran with the -O2 compile flag,
+they all have a slightly lower percentage, but when summed with a percetage from
+stl_tree that was using each function, they all summed to be slightly greater percentages than
+before in the -O0 compile flag. 
+When running a large document such as primes_large with only 1 iteration, 
+use_vector and use_list had about the same percentages of around 46% while
+use_map had the least percentage out of all tests so far with 4.89% as seen in the test
+with the -O0 compile flag. When ran with the -O2 compile flag, both use_vector
+and use_list dropped to around 41% and use_map increased to around 10%, but was still
+considerably less than the other two.

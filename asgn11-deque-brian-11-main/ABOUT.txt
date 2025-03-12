@@ -1,0 +1,45 @@
+-- What kinds of pointers did you use in the typedefs and why?
+For NodePrevPtr, I used a weak pointer because I didn't want to create circular references
+by using a shared pointer. I also didn't use a unique pointer here because a unique
+pointer would require exclusive ownership, but in a deque, the prev and next pointer
+can point to the same node but a unique pointer wouldn't allow this. 
+
+For NodeNextPtr, HeadPtr, TailPtr, and IterPtr, I used a shared pointer because 
+at the current node, the next node has a prev that references the current node and the 
+prev node has a next node that also references, so there is a shared ownership, which is
+why a shared pointer makes most sense here.
+
+
+-- Why do you think the copy and move members are deleted?
+I think the copy and move members are deleted because multiple nodes are referencing 
+the same node, so deleting these members will help prevent memory issues, such as 
+deleting something on accident.
+
+
+-- Did you find valgrind useful on this assignment?
+I didn't really find valgrind that useful on this assignment because I didn't 
+have any memory leaks since I'm using smart pointers instead of
+raw pointers where valgrind was more useful on the last assignment since 
+raw pointers needed me to do memory management but smart pointers helped
+manage memory for me.  
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me around 4 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

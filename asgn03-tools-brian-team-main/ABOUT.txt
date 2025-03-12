@@ -1,0 +1,39 @@
+-- Which these tools might you use if your program is crashing on specific user inputs and why?
+I would use both the gdb debugger and Valgrind for checking memory errors. I would use
+the gdb debugger because I can use the step function to see how different inputs affect
+the flow of the program and identify where unexpected behavior or invalid operations occur.
+I would also use Valgrind for checking memory errors because I would be able to identify what sort
+of errors might be occuring, such as invalid read/write or unitialized value errors.
+
+
+-- Which these tools might you use to determine how much of your code is tested by unit tests and why?
+I would use gcov to determine how much of my code is tested by unit tests because it can show
+how many times each line of code was executed. So if a line of code was not ran, then I would know
+that that part of my code has not yet been tested by a unit test.
+
+
+-- What is a change you might make to address one of the issues in valgrind_vector_as_string.cpp?
+A change I might make to address the issue of "Invalid write of size 1" in valgrind_vector_as_string.cpp 
+is by changing "for (unsigned int ii = 0; ii <= buffer.size(); ++ ii) {" to 
+"for (unsigned int ii = 0; ii < buffer.size(); ++ ii) {". By doing this, it would prevent an out-of-bounds access.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 3 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

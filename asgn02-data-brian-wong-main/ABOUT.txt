@@ -1,0 +1,44 @@
+-- How did you display two fixed digits of precision in median.cpp? What might be an alternative approach?
+In median.cpp, I displayed two fixed digits of precision by using
+"cout << fixed << setprecision(2)."
+An alternative would be doing "cout.precision(2);
+    cout << fixed << median << endl;"
+
+
+-- What data types did you use in frame.cpp and why?
+In frame.cpp, I used vector<string>, string, size_t, and const string&.
+I used vector<string> because I needed a way to store multiple lines of 
+text input, and I don't know how much lines the input may be, which makes a vector
+a good choice.
+I used string because I needed a way to store each line of input before
+adding it into vector<string>.
+I used size_t because I needed to compare an input's length to a variable called
+max_length to set the find the max_length. Since the input's length is a long 
+unsigned int, I couldn't use int for max_length, so I used size_t.
+I used const string& because I did not want to modify the text, and I
+wanted to refer to each string without coyping it since I didn't need to.
+
+
+-- How did you ignore additional input on lines in grid.cpp?
+In grid.cpp, I ignored additional input on lines with "cin.ignore(numeric_limits<streamsize>::max(), '\n');."
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+I spent around 1.5-2 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

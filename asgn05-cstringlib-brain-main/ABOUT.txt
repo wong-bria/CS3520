@@ -1,0 +1,49 @@
+-- How did you handle strings that are not the same length in strcmp?
+I handled string that are not the same length in strcmp by checking
+if str1 ends before str2 through identifying if it has a null terminator
+at index i when I iterate through str1 and str2 by i. If str1 has a null
+terminator first, then str1 ended first. If str2 has a null terminator first,
+then str2 ended first.
+
+
+-- How did you start from the end of the string in strrchr?
+I started from the end of the string in strrchr by first finding the
+length of the string I want to search through. Afterwards, I used
+a for loop where I initialized it to start from the length I found until it is
+than zero. I would also subtract by one to iterate backwards through the string.
+That way I could start from the end of the string in strrchr.
+
+
+-- How did you look for a substring in strstr?
+I look for a substring in strstr by first checking if str2 is empty.
+If it is, then I return the entire str1.
+Afterwards, I find the length of str1 and str2. If the length of str2 is greater
+than the length of str1, then I return the null terminator.
+Otherwise, I iterate through str1 by looking from 0 to the length of str1 - the 
+length of str2 since those are the only spots where str2 could start inside
+of str1. Then, I compare each character in each string and check if they are equal.
+If they are equal, then I continue until the entire length of str2. If I'm able
+to iterate through the entire str2 length, then a substring has been found
+and will return the starting pointer of where the search started. Otherwise,
+return a null terminator to indicate that a substring was not found.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+About 4.5 hours
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

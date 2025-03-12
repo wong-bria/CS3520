@@ -1,0 +1,62 @@
+PUT ANSWER HERE
+Inputs: 
+Enter a buffer size: 9
+Enter a string:
+"hello"
+"bye"
+
+One type of memory error in the program using valgrind is: "Invalid write of size 1."
+The cause of this error is on line 32-33 
+"for (unsigned int ii = 0; ii <= buffer.size(); ++ ii) {"
+    "if (!(cin >> buffer[ii])) {"
+When ii = buffer.size() on line 32, at line 33 it will do buffer[buffer.size()]
+but that will lead to the program trying to access something out-of-bounds, 
+resulting to an invalid write.
+Relavent output: 
+==2214150== Invalid write of size 1
+==2214150==    at 0x4F4FD49: std::basic_istream<char, std::char_traits<char> >& std::operator>><char, std::char_traits<char> >(std::basic_istream<char, std::char_traits<char> >&, char&) (in /usr/lib64/libstdc++.so.6.0.25)
+==2214150==    by 0x40137C: read_buffer_contents(std::vector<char, std::allocator<char> >&) (valgrind_vector_as_string.cpp:33)
+==2214150==    by 0x401489: main (valgrind_vector_as_string.cpp:70)
+==2214150==  Address 0x5b63509 is 0 bytes after a block of size 9 alloc'd
+==2214150==    at 0x4C39913: operator new(unsigned long) (vg_replace_malloc.c:483)
+==2214150==    by 0x401E84: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
+==2214150==    by 0x401D29: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+==2214150==    by 0x401BE9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (stl_vector.h:378)
+==2214150==    by 0x4018F2: std::vector<char, std::allocator<char> >::_M_default_append(unsigned long) (vector.tcc:650)
+==2214150==    by 0x401738: std::vector<char, std::allocator<char> >::resize(unsigned long) (stl_vector.h:1011)
+==2214150==    by 0x40147D: main (valgrind_vector_as_string.cpp:67)
+
+
+A second type of memory error is "Conditional jump or move depends on uninitialised value(s)".
+The cause of this error is that the program is trying to make a decision
+based on a variable that hasn't been initialized. The issue is on line 71,
+"if (characters == 0) {" since characters is set by 70, which calls
+read_buffer_contents to set the value, but in read_buffer_contents, on line 29
+"int numchars;" is defined but uninitialised which leads to characters not
+having a value.
+Relavent output: 
+==2214150== Conditional jump or move depends on uninitialised value(s)
+==2214150==    at 0x401491: main (valgrind_vector_as_string.cpp:71)
+
+A third type of memory error is "Invalid read of size 1".
+The cause of this error is on line 67 "buffer.resize(newsize);" and 
+lines 48-49:
+"for (int ii = 0; ii <= length; ++ ii) {"
+    "cout << buffer[ii];"
+In these lines of code, line 67 allocates a vector of size 9.
+In lines 48 when ii = length, at line 49, buffer[ii] will
+be buffer[length] which leads to an out-of-bound read, resulting
+in an invalid read.
+Relavent output: 
+==2214150== Invalid read of size 1
+==2214150==    at 0x401407: print_buffer_contents(std::vector<char, std::allocator<char> > const&, int) (valgrind_vector_as_string.cpp:49)
+==2214150==    by 0x4014CC: main (valgrind_vector_as_string.cpp:77)
+==2214150==  Address 0x5b63509 is 0 bytes after a block of size 9 alloc'd
+==2214150==    at 0x4C39913: operator new(unsigned long) (vg_replace_malloc.c:483)
+==2214150==    by 0x401E84: std::__new_allocator<char>::allocate(unsigned long, void const*) (new_allocator.h:137)
+==2214150==    by 0x401D29: std::allocator_traits<std::allocator<char> >::allocate(std::allocator<char>&, unsigned long) (alloc_traits.h:464)
+==2214150==    by 0x401BE9: std::_Vector_base<char, std::allocator<char> >::_M_allocate(unsigned long) (stl_vector.h:378)
+==2214150==    by 0x4018F2: std::vector<char, std::allocator<char> >::_M_default_append(unsigned long) (vector.tcc:650)
+==2214150==    by 0x401738: std::vector<char, std::allocator<char> >::resize(unsigned long) (stl_vector.h:1011)
+==2214150==    by 0x40147D: main (valgrind_vector_as_string.cpp:67)
+

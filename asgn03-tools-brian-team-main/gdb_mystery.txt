@@ -1,0 +1,15 @@
+PUT ANSWER HERE
+
+VALUE 1: m2 = 505. I ran the debugger, then entered the input "b". Then,
+it showed that there was an "Arithmetic exception" on line 28. This
+indicated to me that this was when the division by 0 error occurred
+since ii = 0 and was the divisor. I then looked at at varialbes -> locals on
+the left and saw that m2 = 505.
+
+VALUE 2: m1b = 34. I put a breakpoint on line 8, "cout << "mystery" << endl;" I 
+then ran the debugger, and entered "21". I then clicked step into 3 times,
+the word "mystery" was printed, I saw i = 10, and I saw that m1b = 34.
+
+VALUE 3: i = 19. I put a breakpoint on line 39, "mystery1b();" I then ran the debugger
+and entered 21. I then clicked step into until I saw m1b turn to 28 a second
+time. When m1b turned 28 a second time, I saw that z = 28, i = 19, m1b = 28.

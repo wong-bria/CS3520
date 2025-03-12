@@ -1,0 +1,55 @@
+-- In the WordArray constructor that takes a charater array as an argument,
+ how did you split the string into words?
+In the WordArray constructor that takes a character array as an argument, it
+splits the string into words with the appendWords method which takes in temp--
+a copy of the input words. In appendWords, it uses strtok to split the sstring into words
+by the delimiter " ". 
+
+
+
+-- How did you append the words from one array onto another?
+I appended the words from one array onto another by using appendArray
+inside of append. If there are no words from the array I want to append from, then
+nothing happens. I then calculate if the number of words in the array I want to
+append to plus the number of words in the array I want to append from is greater than
+the max words the array I want to append to can hold. If it is, then increase
+the max number of words the array can hold to the number of words in the array plus
+the number of words in the array I want to append from. 
+Afterwards, I call appendArray which has a for loop from 0 to the size of the array 
+I want to append from. For each index starting from 0, I get the word called word from 
+the array I want to append from, then I allocate a new block of memory called wordCopy to 
+store a copy of the current word with a plus one to account for the null terminator.
+ Then I use strcpy to copy word into wordCopy. Afterwards, I assign wordCopy to
+ the array I want to append to at the position equal to the current index of the
+ for loop. I then increase m_numWords since there is a word appended to the array. 
+ Then the loop continues.
+
+
+-- Did you find valgrind useful on this assignment?
+Yes, I found valgrind useful on this assignment because I had memory leaks
+that caused two tests to fail and valgrind was able to show me 
+the relavent lines that were causing the issue, which allowed me
+to have a better understanding on where in my code I needed to focus on
+to fix the issue and pass the test.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I went to online TA office hour for help on fixing my code since
+two of append tests were failing.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 4.5 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

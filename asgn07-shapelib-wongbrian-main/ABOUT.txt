@@ -1,0 +1,40 @@
+-- How did you make the Shape class abstract?
+I made the Shape class abstract by declaring the display and translate 
+functions are pure virtual functions by using the virtual keyword along with
+"= 0" at the end of the function declaration.
+
+
+-- What was different about the functions you implemented for the [] operator on Vector2D?
+The only difference between the functions I implemented for the [] operator on Vector2D
+is that in one function header, I put the const keyword at the start and end of the header 
+to define a const element access, while in the other function header, I have the same body
+and function header except the header doesn't have the const keyword at the start
+or end of the header to define a non-const element access.
+
+
+-- How did you pass arguments into the stream operator functions?
+I passed ostream& into the stream operator functions by passing it in by 
+reference so I can modify the stream directly and chain operations. I also
+made it non-const so I can insert data into it, such as os << v.m_x.
+I also passed const Vector2D& v as a constant reference because I don't want 
+v to be modified in the function.
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 3.5 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

@@ -1,0 +1,37 @@
+-- Have you used other unit testing frameworks before?  If so, how does CxxTest compare?
+In Java, I have used JUnit. Compared Junit, CxxTest is pretty similar to JUnit because
+they both give a way to check if an actual result matches your expected result,
+both give a way to check if something is true, and both tell you which line failed
+a test if an assertion fails. 
+
+
+-- Did you find gcov useful in this assignment?
+Yes, I found gcov useful in this assignment because it allowed me to check if I actually
+tested every line of every function of IntArray.cpp.
+
+
+-- Did you find the unit tests helpful in implementing IntArrayAlgorithms?
+Yes, I found the unit tests helpful in implementing IntArrayAlgorithms because if a test
+failed, then it's telling me that I implemented my functions wrong. Likewise, if all tests
+passes, then it's telling me that I correctly wrote my functions.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 2 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

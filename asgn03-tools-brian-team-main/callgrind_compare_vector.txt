@@ -1,0 +1,11 @@
+PUT ANSWER HERE
+
+I found that run_vector_at has 950,002,469 instruction count and accounted for 64.94%
+of total cost, and run_vector_brackets has 510,001,087 instruction count and accounted for 
+34.86% of total cost. This is probably because at() has bounds check, so I would
+use at() when I need to do bound checking and I would use brackets if I'm
+completely sure that the indices are valid.
+
+relevant lines from the callgrind_annotate output:
+950,002,469 (64.94%)  callgrind_compare_vector.cpp:run_vector_at() [/home/brianwong1/asgn03-tools-brian-team/callgrind_compare_vector]
+510,001,087 (34.86%)  callgrind_compare_vector.cpp:run_vector_brackets() [/home/brianwong1/asgn03-tools-brian-team/callgrind_compare_vector]

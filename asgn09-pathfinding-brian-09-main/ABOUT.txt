@@ -1,0 +1,38 @@
+-- What did you think of the Red Blob pathfinding tutorial?
+I think the Red Blob pathfinding tutorial is a good resource. The code provided
+on the website was pseudocode I could use to help with my implementation
+of the path finding algorithms, which was a nice resource to have. The animations
+on the website also looks cool.
+
+
+-- Why did we need to define operator< for Point and PriorityPoint?
+I think we needed to define operator< for Point and PriorityPoint because
+they are needed for a set and map. In a set and map of Point or PriorityPoint,
+we need a way to compare values to keep them sorted, which is why operator<
+had to be defined for Point and PriorityPoint.
+
+
+-- Which did you prefer implementing, BFS or A*, and why?
+I prefer implementing BFS because I'm more familiar with BFS so it was easier 
+for me to implment BFS compared to A*.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 5 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

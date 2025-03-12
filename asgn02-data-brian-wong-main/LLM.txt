@@ -1,0 +1,14 @@
+-- What LLM(s) did you use?
+none
+
+
+-- What prompts did you provide?
+n/a
+
+
+-- What did you do with the output? How much did you have to change it?
+n/a
+
+
+-- Did you find the LLM useful? Did it help or hinder your understanding of the assignment?
+n/a

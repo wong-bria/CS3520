@@ -1,0 +1,37 @@
+-- What was the issue in circle.cpp and how did you fix it?
+The issue in circle.cpp was that the formulas for calculating the Diameter, Circumference, and Area of a circle
+was wrong. I fixed this issue by changing the diameter from only being radius to 2 * radius. For circumference, 
+I changed the formula from radius to 2 * pi * radius. For Area, I changed the formula from radius to 
+pi * radius * radius.
+
+
+-- What was the issue in hello.cpp and how did you fix it?
+The issue in hello.cpp was that it wasn't saying/printing the name/the user's input to the console, resulting
+in "Hello, !" despite whatever the user inputed. I fixed this by changing the "" to name.
+
+
+-- What was the issue in numbername.cpp and how did you fix it?
+The issue in numbername.cpp was that when you typed 1, 2, or 3, the console would output an empty string
+which shows nothing. I fixed this by replacing "" in case 1 with name1, "" in case 2 with name2, and 
+"" in case 3 with name3.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+I watched the professor's L01-assignment-demo_out.mp4 but other than that, no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about one hour to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+I liked that this assignment was short and allowed me to practice making commits and push.
+
+
+-- (Optional) How would you improve the assignment?

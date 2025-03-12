@@ -1,0 +1,44 @@
+-- How different were the implementations for different collection types?
+The implementations for the different collections types were pretty similar.
+In each of the add_document, they had a similar structure with a for loop and an 
+if statement. They do vary a little since one implementation has one for loop
+while the others have two. In each of the lookup_word they are also similar
+in structure because two of them use a for loop and if statement but the third
+implementation only uses an if statement. They are also pretty similar in size.
+
+
+
+-- Why do you think compare_main should search for a word not in the collection?
+I think compare_main should search for a word not in the collection because 
+you are simulating a worst-case scenario for each look up implementations.
+This improves your ability to check the performance of each function because it needs
+to go through the entire document which allows you to get a better sense
+of how the performance for each function are rather than just finding the word
+at the start and stopping which wouldn't give you a good idea on the performance
+of the functions.
+
+
+-- Do you prefer C++17 or C++98?  Why?
+I prefer C++17 because I'm able to use range-based for loops which can be more precise for 
+what I'm doing if I don't want to iterate through an entire collection of something.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me around 4.5 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

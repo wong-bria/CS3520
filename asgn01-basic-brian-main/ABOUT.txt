@@ -1,0 +1,42 @@
+-- What control structure did you use in fizzbuzz.cpp and why?
+I used if statements to validate the user's input and determine if an error
+message should be printed.
+I then used a for loop as my control structure in fizzbuzz.cpp because I needed to iterate
+through a range of number, 1 to 20 specifically, and depending on the number,
+I would do print different things. Since I cared about the numbers in the loop,
+I used a for loop.
+
+
+-- Why do you think it is a good idea to check that W and H are in range in rectangle.cpp?
+I think it is a good idea to check that W and H are in range in rectangle.cpp because
+a rectangle can't have a width or height of 0 or less since it wouldn't make sense. 
+We also wouldn't want the width or height to be greater than or equal to 21 because
+we wouldn't want to print a rectangle that is too big.
+
+
+-- How did you check for end of input in sum.cpp and lineno.cpp?
+In sum.cpp, I put "cin >> num" as a while loop condition which would check for end of input
+and turn false if there is.
+In lineno.cpp, I put "getline(cin, input)" as a while loop condition which would also
+check for end of input and turn false if there is.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+I took about 1 hour to 1.5 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

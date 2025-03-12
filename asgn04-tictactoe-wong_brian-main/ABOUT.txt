@@ -1,0 +1,61 @@
+-- How did you check for input errors when reading in board size and moves?
+When reading in board size, I checked for input errors in
+game_input_board_size by checking if cin failed, or if
+the given size is less than 2 or greater than 5 since
+we only want the board size to be from sizes 2 to 5, inclusive.
+When reading in moves, I check for input errors in 
+game_display_board_and_input_next_move by checking if cin failed,
+or if row is greater than or equal to the board size, if
+col is greater than or equal to the board size, and if 
+the spot the user is trying to place is not blank.
+
+
+-- Was there any impact of making Board::size unsigned? Do you think it would be better if it were signed or not?
+An impact of making Board::size unsigned was that when I was
+comparing row and col size to the board size, I had to make sure
+that the row and col variables were also unsigned. Another impact
+was that it made the board size only be postive numberes.
+I think it is better that it is unsigned because negative inputs 
+as the size would not make sense.
+
+
+-- Describe your approach to checking if a player has won.
+I checked for row, then column, then each diagonal to check if a player has won.
+For checking row, I iterate through each row of the board, and for each
+row with col 0, if it is not blank, then I check if it contains an X or O. 
+I then iterate through that entire row and check if they have a different symbol.
+If they are not equal, then no row win. If they are all the same, then there
+is a row win. I will then check what symbol was at the start of that row and
+say that symbol is the winner.
+
+Checking for column win is the same as checking for row win, but now with columns
+instead and I check everything with row0 first to determine the symbol to compare.
+
+For diagonal win (top-left to bottom-right), I determine the symbol
+of the top-left. I then iterate through the diagonals to the bottom-right 
+with a for-loop and check if they are different symbols. If they are, then no
+diagonal win. Otherwise, there is a diagonal win.
+
+Same thing for diagonal win (top-right to bottom-left), but I determine the 
+top-right symbol first.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 6 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?

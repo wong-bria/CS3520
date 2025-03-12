@@ -1,0 +1,60 @@
+-- What type of exceptions did you throw and why?
+I threw an invalid_argument exception when trying to update player and robot locations
+in input_next_move_and_update(). I threw an illegal_argument when the given input
+is not "w", "a", "s", "d", or " " because those are the only valid inputs/arguments
+to the function and everything else would be considered invalid inputs,
+ thus an illegal_argument.
+
+I also threw an invalid_argument exception if there is an unrecognized character,
+ if the world is not a rectangle,  if the world is is empty, 
+ if more than one player is found, and
+ if there are no players in the world initially because in all these situations, there
+ is an exception caused by the user inputting something invalid in the file they are 
+ providing, thus an invalid_argument.
+
+ I also threw runtime_error if there is an error opening the file because there
+ was not any more specific exception that was suitable to categorize this
+ exception, so I used a runtime_error which is the most general.
+ 
+
+
+-- Why does this assignment use getline rather than operator >>?
+This assignment uses getline rather than operator >> because getline 
+reads an entire line of text including spaces until a newline character while
+>> stops reading at the first whitespace it encounters. Since space, " ", is 
+a valid input for the input for the user to stay still, getline would be better
+suited to handle space since if the user does multiple spaces in a line, 
+getline would read the spaces as input but >> would stop reading at the first space. 
+
+
+-- How did you check for a win or lose?
+I checked for a lose by checking if m_player is empty with m_player.empty() because
+m_player is a vector holding the player, so if it is empty, then there is no player, thus 
+the user has lost.
+
+I checked for a win by having a boolean flag called robotsLeft. robotsLeft is true
+if something in m_robotsAndDebris is not a debris with the
+is_debris() function, which means something is a robot. Since robotsLeft is true, 
+then it does not meet the win condition of having no robots left, so no win yet. If robotsLeft
+is false, then there are no robots in m_robotsAndDebris, so there is a win.
+
+
+============================================================
+
+-- Did you use any external resources? If so, cite them below. If not, write no.
+no.
+
+
+-- Did you use any LLM-based tool? If so, cite them below and fill out LLM.txt. If not, write no.
+no.
+
+
+-- About how many hours did it take you to complete this assignment?
+It took me about 10.5 hours to complete this assignment.
+
+
+-- (Optional) What was your favorite part of the assignment?
+
+
+
+-- (Optional) How would you improve the assignment?
